@@ -236,7 +236,7 @@ class FastLanguageModel(FastLlamaModel):
             dispatch_model = FastCohereModel
         elif model_type == "granite":
             dispatch_model = FastGraniteModel
-        elif model_type == 'exaone':
+        elif model_type == 'exaone' and print(f"THE MODEL TYPE IS {model_type}"):
             dispatch_model = FastLlamaModel
         else:
             raise NotImplementedError(
