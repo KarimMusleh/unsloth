@@ -236,6 +236,8 @@ class FastLanguageModel(FastLlamaModel):
             dispatch_model = FastCohereModel
         elif model_type == "granite":
             dispatch_model = FastGraniteModel
+        elif model_type == 'exaone':
+            dispatch_model = FastLlamaModel
         else:
             raise NotImplementedError(
                 f"Unsloth: {model_name} not supported yet!\n"\
