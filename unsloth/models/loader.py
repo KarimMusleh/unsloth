@@ -177,7 +177,7 @@ class FastLanguageModel(FastLlamaModel):
         if not was_disabled: enable_progress_bars()
 
         model_type = model_config.model_type
-        print(f"THE MODEL TYPE IS {model_type}")
+
         if model_type == "llama":
             scaling_type = None
             if getattr(model_config, "rope_scaling", None) is not None:
